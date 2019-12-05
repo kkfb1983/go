@@ -6,6 +6,9 @@ import (
 )
 
 func main() {
+	//for _, arg := range os.Args[1:]{
+	//
+	//}
 	/** add func */
 	//var c int
 	// c = add(3, 8)
@@ -25,11 +28,15 @@ func main() {
 	//fmt.Println(f>=0)
 	////fmt.Println(c==f)
 	//fmt.Println(c == src.Celsius(f))
-	c := src.FToC(212.0)
-	fmt.Println(c.String())
-	fmt.Printf("%v\n", c)
-	fmt.Printf("%s\n", c)
-	fmt.Println(c)
-	fmt.Printf("%g\n", c)
-	fmt.Println(float64(c))
+	//c := src.FToC(212.0)
+	//fmt.Println(c.String())
+	//fmt.Printf("%v\n", c)
+	//fmt.Printf("%s\n", c)
+	//fmt.Println(c)
+	//fmt.Printf("%g\n", c)
+	//fmt.Println(float64(c))
+	//c := src.CTok(1)
+	//fmt.Println(c)
+	//fmt.Println(float64(c))
+	fmt.Println(src.PopCount(9))
 }

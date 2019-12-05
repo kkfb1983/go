@@ -4,6 +4,7 @@ import "fmt"
 
 type Celsius float64
 type Fahrenheit float64
+type Kelvin float64
 
 const (
 	AbsoluteZeroC Celsius = -273.15
@@ -17,6 +18,10 @@ func CTof(c Celsius) Fahrenheit {
 
 func FToC(f Fahrenheit) Celsius {
 	return Celsius((f - 32) * 5 / 9)
+}
+
+func CTok(c Celsius) Kelvin {
+	return Kelvin(c * 274.15)
 }
 
 func (c Celsius) String() string {
