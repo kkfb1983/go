@@ -12,7 +12,9 @@ func main() {
 	/** add func */
 	//var c int
 	// c = add(3, 8)
-	src.Test()
+	//src.Test()
+	//src.Slics()
+	src.Dedup()
 	return
 	param := src.Add(5, 15)
 	fmt.Println("hello word", param)
