@@ -14,7 +14,9 @@ func main() {
 	// c = add(3, 8)
 	//src.Test()
 	//src.Slics()
-	src.Dedup()
+	//src.Dedup()
+	var v = []int{1, 3, 2}
+	src.Treesort(v)
 	return
 	param := src.Add(5, 15)
 	fmt.Println("hello word", param)
