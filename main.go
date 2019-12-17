@@ -8,9 +8,9 @@ import (
 	"net/http"
 )
 
-type api struct {
-	message           string
-	documentation_url string
+type Api struct {
+	Message           string `json:"message"`
+	Documentation_url string `json:"documentation_url"`
 }
 
 func main() {
@@ -82,10 +82,11 @@ func main() {
 func getUrl() {
 	url := src.IssuesUrl + "q=decoder"
 	resp, _ := http.Get(url)
-	s := api{}
+	s := Api{}
 	body, _ := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	json.Unmarshal([]byte(body), &s)
-	fmt.Println(url, s.message, s.documentation_url)
+	fmt.Println("get url->"+url+"\n", "msg->"+s.Message+"\n", "do url->"+s.Documentation_url+"\n")
 	fmt.Println(string(body))
+
 }
