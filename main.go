@@ -87,11 +87,9 @@ func getUrl() {
 	body, _ := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	json.Unmarshal([]byte(body), &s)
-	//fmt.Println(s['message'])
-	//fmt.Println(json.Marshal(s))
 	//fmt.Println(string(body))
 	for key, val := range s {
-		fmt.Println(key+"->", val+"\n")
+		fmt.Println(key+" ->", val+"\n")
 	}
 
 }
