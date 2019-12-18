@@ -74,19 +74,24 @@ func main() {
 	//fmt.Println(float64(c))
 	//fmt.Println(src.PopCount(9))
 
-	fmt.Println("\n#######################\n")
 	getUrl()
 
 }
 
 func getUrl() {
+	fmt.Println("\n#######################\n")
 	url := src.IssuesUrl + "q=decoder"
 	resp, _ := http.Get(url)
-	s := Api{}
+	//s := Api{}
+	s := make(map[string]string)
 	body, _ := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	json.Unmarshal([]byte(body), &s)
-	fmt.Println("get url->"+url+"\n", "msg->"+s.Message+"\n", "do url->"+s.Documentation_url+"\n")
-	fmt.Println(string(body))
+	//fmt.Println(s['message'])
+	//fmt.Println(json.Marshal(s))
+	//fmt.Println(string(body))
+	for key, val := range s {
+		fmt.Println(key+"->", val+"\n")
+	}
 
 }

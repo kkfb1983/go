@@ -11,6 +11,14 @@ import (
 
 const IssuesUrl = "https://api.github.com/search/issues"
 
+const templ = `{{.TotalCount}} issues:
+{{range .Items}}----------------------------------------
+Number: {{.Number}}
+User:   {{.User.Login}}
+Title:  {{.Title | printf "%.64s"}}
+Age:    {{.CreatedAt | daysAgo}} days
+{{end}}`
+
 type IssuesSearchResult struct {
 	TotalCount int `json:"total_count"`
 	Items      []*Issue
