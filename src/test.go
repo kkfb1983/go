@@ -16,8 +16,8 @@ const (
 
 func Test() {
 	// 数组
-	array()
-	sha()
+	//array()
+	//sha()
 
 }
 
@@ -59,4 +59,9 @@ func sha() {
 	// 4b68ab3847feda7d6c62c1fbcbeebfa35eab7351ed5e78f4ddadea5df64b8015
 	// false
 	// [32]uint8
+}
+func results(d int) (r, f int, err error) {
+	r += d
+	f += d
+	return
 }

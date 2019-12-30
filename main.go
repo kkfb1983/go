@@ -74,8 +74,10 @@ func main() {
 	//fmt.Println(float64(c))
 	//fmt.Println(src.PopCount(9))
 
-	getUrl()
-
+	//getUrl()
+	fmt.Println("\n#######################\n")
+	//src.Squares()
+	src.Topsort()
 }
 
 func getUrl() {
@@ -84,9 +86,11 @@ func getUrl() {
 	resp, _ := http.Get(url)
 	//s := Api{}
 	s := make(map[string]string)
+
 	body, _ := ioutil.ReadAll(resp.Body)
 	resp.Body.Close()
 	json.Unmarshal([]byte(body), &s)
+
 	//fmt.Println(string(body))
 	for key, val := range s {
 		fmt.Println(key+" ->", val+"\n")
