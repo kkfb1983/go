@@ -80,7 +80,9 @@ func main() {
 	fmt.Println("\n#######################\n")
 	//src.Squares()
 	//src.Topsort()
-	breadthFirst(crawl, os.Args[1:])
+	//breadthFirst(crawl, os.Args[1:])
+	//src.Title("http://www.baidu.com")
+	src.Title(os.Args[1])
 }
 
 func getUrl() {
