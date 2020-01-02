@@ -75,3 +75,6 @@ func panic_test(v int) int {
 	}
 	return res
 }
+func dd(param ...interface{}) {
+	fmt.Println(param, "\n")
+}
