@@ -92,7 +92,14 @@ func main() {
 	//src.Test()
 	//defer printStack()
 	//f(3)
-	src.Soletitle(os.Args[1])
+	//src.Soletitle(os.Args[1])
+	//perim := src.Path{
+	//	{1, 1},
+	//	{5, 1},
+	//	{5, 4},
+	//	{1, 1},
+	//}
+	//fmt.Println(src.Distance(perim))
 }
 
 func getUrl() {
