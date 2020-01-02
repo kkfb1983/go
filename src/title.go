@@ -9,9 +9,9 @@ import (
 
 func Title(url string) error {
 	resp, _ := http.Get(url)
+	defer resp.Body.Close()
 	ct := resp.Header.Get("Content-Type")
 	if ct != "text/html" && !strings.HasPrefix(ct, "text/html;") {
-		resp.Body.Close()
 		return fmt.Errorf("%s has type %s, not text/html", url, ct)
 	}
 	doc, err := html.Parse(resp.Body)

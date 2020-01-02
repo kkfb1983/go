@@ -18,7 +18,8 @@ func Test() {
 	// 数组
 	//array()
 	//sha()
-
+	val := panic_test(2)
+	fmt.Println(val)
 }
 
 func array() {
@@ -64,4 +65,13 @@ func results(d int) (r, f int, err error) {
 	r += d
 	f += d
 	return
+}
+
+func panic_test(v int) int {
+	var res int
+	switch v {
+	case 1:
+		res = v
+	}
+	return res
 }

@@ -8,6 +8,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"runtime"
 )
 
 type Api struct {
@@ -48,8 +49,8 @@ func main() {
 	//	fmt.Printf("#%-5d %9.9s %.55s\n",
 	//		item.Number, item.User.Login, item.Title)
 	//}
-	param := src.Add(5, 15)
-	fmt.Println("hello word", param)
+	//param := src.Add(5, 15)
+	//fmt.Println("hello word", param)
 	// go fmt.Println("hello word", param)
 	/** tempconv func */
 	//var c src.Celsius
@@ -82,7 +83,15 @@ func main() {
 	//src.Topsort()
 	//breadthFirst(crawl, os.Args[1:])
 	//src.Title("http://www.baidu.com")
-	src.Title(os.Args[1])
+	//src.Title(os.Args[1])
+	//defer src.Trace("Title")
+	// ...lots of work…
+	//time.Sleep(5 * time.Second) // simulate slow
+	//var double_val int = src.Deuble(4)
+	//fmt.Printf("res d:%d",double_val)
+	//src.Test()
+	//defer printStack()
+	//f(3)
 }
 
 func getUrl() {
@@ -126,4 +135,15 @@ func breadthFirst(f func(item string) []string, worklist []string) {
 			}
 		}
 	}
+}
+
+func f(x int) {
+	fmt.Printf("f(%d)\n", x+0/x) // panics if x == 0
+	defer fmt.Printf("defer %d\n", x)
+	f(x - 1)
+}
+func printStack() {
+	var buf [4096]byte
+	n := runtime.Stack(buf[:], false)
+	os.Stdout.Write(buf[:n])
 }
