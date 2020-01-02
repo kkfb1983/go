@@ -92,6 +92,7 @@ func main() {
 	//src.Test()
 	//defer printStack()
 	//f(3)
+	src.Soletitle(os.Args[1])
 }
 
 func getUrl() {
