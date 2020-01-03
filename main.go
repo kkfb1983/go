@@ -23,7 +23,7 @@ func main() {
 	/** add func */
 	//var c int
 	// c = add(3, 8)
-	//src.Test()
+	src.Test()
 	//src.Slics()
 	//src.Dedup()
 	//var v = []int{1, 3, 2}
