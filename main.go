@@ -1,9 +1,9 @@
 package main
 
 import (
-	"./src"
 	"encoding/json"
 	"fmt"
+	src "github.com/kkfb1983/go/src"
 	"io/ioutil"
 	"log"
 	"net/http"
