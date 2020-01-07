@@ -100,6 +100,7 @@ func main() {
 	//	{1, 1},
 	//}
 	//fmt.Println(src.Distance(perim))
+	src.Intset_f()
 }
 
 func getUrl() {
