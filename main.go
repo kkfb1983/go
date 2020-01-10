@@ -23,7 +23,7 @@ func main() {
 	/** add func */
 	//var c int
 	// c = add(3, 8)
-	src.Test()
+	//src.Test()
 	//src.Slics()
 	//src.Dedup()
 	//var v = []int{1, 3, 2}
@@ -78,7 +78,7 @@ func main() {
 	//fmt.Println(src.PopCount(9))
 
 	//getUrl()
-	fmt.Println("\n#######################\n")
+	//fmt.Println("\n#######################\n")
 	//src.Squares()
 	//src.Topsort()
 	//breadthFirst(crawl, os.Args[1:])
@@ -100,6 +100,7 @@ func main() {
 	//	{1, 1},
 	//}
 	//fmt.Println(src.Distance(perim))
+	fmt.Println("\n#######################\n")
 	src.Intset_f()
 }
 
