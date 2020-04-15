@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./src"
+	"demo/src"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -78,7 +78,7 @@ func main() {
 	//fmt.Println(src.PopCount(9))
 
 	//getUrl()
-	fmt.Println("\n#######################\n")
+	//fmt.Println("\n#######################\n")
 	//src.Squares()
 	//src.Topsort()
 	//breadthFirst(crawl, os.Args[1:])
@@ -92,7 +92,11 @@ func main() {
 	//src.Test()
 	//defer printStack()
 	//f(3)
-	src.Soletitle(os.Args[1])
+	//src.Soletitle(os.Args[1])
+	fmt.Println("\n########### interface ############\n")
+	src.InterfaceDemo()
+	//src.Interface()
+
 }
 
 func getUrl() {
