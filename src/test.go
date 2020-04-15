@@ -18,8 +18,16 @@ func Test() {
 	// 数组
 	//array()
 	//sha()
-	val := panic_test(2)
-	fmt.Println(val)
+	//val := panic_test(2)
+	//p := Point{1, 2}
+	//p.Pointer_test(2)
+	//fmt.Println(p) // "{2, 4}"
+	//a := 1
+	//b := a
+	//c := &b
+	//fmt.Println(a,b,*c)
+	//*c = 4
+	//fmt.Println(a,b,*c)
 }
 
 func array() {
@@ -74,4 +82,12 @@ func panic_test(v int) int {
 		res = v
 	}
 	return res
+}
+func dd(param ...interface{}) {
+	fmt.Println(param, "\n")
+}
+
+func (p *Point) ScaleBy(factor float64) {
+	p.X += factor
+	p.Y += factor
 }

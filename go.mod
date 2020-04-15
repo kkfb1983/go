@@ -1,4 +1,4 @@
-module demo
+module github.com/kkfb1983/go
 
 go 1.12
 
